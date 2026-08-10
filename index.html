@@ -5,149 +5,342 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>عبد اللطيف لبيهي | تسليح حديد البناء</title>
+
 <style>
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Tahoma, sans-serif;
-  background: #222;
-  color: white;
-  line-height: 1.8;
+    font-family: Arial, Tahoma, sans-serif;
+    background: #ffffff;
+    color: #222;
+    line-height: 1.8;
 }
 
+/* الهيدر */
+
 header {
-  padding: 25px 7%;
-  background: #111;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    padding: 18px 7%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #f5b400;
+    font-size: 25px;
+    font-weight: bold;
+    color: #f5b400;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
+    color: #222;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
+nav a:hover {
+    color: #f5b400;
+}
+
+/* الواجهة الرئيسية */
+
 .hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #222, #111);
+    text-align: center;
+    padding: 110px 20px;
+    background:
+        linear-gradient(135deg, #fffaf0, #ffffff);
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero h1 {
-  font-size: 40px;
-  color: #f5b400;
-  margin-bottom: 20px;
+    font-size: 48px;
+    color: #d99d00;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 35px;
 }
 
 .button {
-  display: inline-block;
-  background: #f5b400;
-  color: #111;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+    display: inline-block;
+    background: #f5b400;
+    color: #222;
+    padding: 14px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 6px 18px rgba(245,180,0,0.25);
+    transition: 0.3s;
 }
 
+.button:hover {
+    background: #d99d00;
+    transform: translateY(-3px);
+}
+
+/* الأقسام */
+
 section {
-  padding: 50px 7%;
-  text-align: center;
+    padding: 75px 7%;
+    text-align: center;
 }
 
 section h2 {
-  color: #f5b400;
-  margin-bottom: 25px;
-  font-size: 30px;
+    color: #d99d00;
+    margin-bottom: 35px;
+    font-size: 34px;
+}
+
+/* بطاقات الخدمات */
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .card {
-  background: #333;
-  padding: 25px;
-  margin: 15px auto;
-  max-width: 600px;
-  border-radius: 12px;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
-footer {
-  background: #111;
-  text-align: center;
-  padding: 25px;
-  color: #ccc;
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
+
+.card h3 {
+    color: #d99d00;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* التواصل */
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    background: #fffaf0;
+    padding: 40px 25px;
+    border-radius: 18px;
+    border: 1px solid #f5d98a;
+}
+
+.contact-box p {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.phone {
+    color: #d99d00;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* الفوتر */
+
+footer {
+    background: #f8f8f8;
+    border-top: 1px solid #eeeeee;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+/* الهاتف */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 4%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 19px;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    section h2 {
+        font-size: 29px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">لبيهي</div>
 
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#services">خدماتنا</a>
-    <a href="#contact">اتصل بنا</a>
-  </nav>
+<div class="logo">
+لبيهي
+</div>
+
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#services">خدماتنا</a>
+<a href="#contact">اتصل بنا</a>
+</nav>
+
 </header>
 
+
 <section class="hero" id="home">
-  <h1>عبد اللطيف لبيهي</h1>
 
-  <p>
-    متخصص في تسليح حديد البناء
-  </p>
+<h1>عبد اللطيف لبيهي</h1>
 
-  <a class="button" href="#contact">
-    تواصل معنا
-  </a>
+<p>
+متخصص في تسليح حديد البناء
+</p>
+
+<a class="button" href="#contact">
+تواصل معنا
+</a>
+
 </section>
+
 
 <section id="services">
-  <h2>خدماتنا</h2>
 
-  <div class="card">
-    <h3>تسليح حديد البناء</h3>
-    <p>
-      تنفيذ أعمال تسليح حديد البناء بدقة واحترافية.
-    </p>
-  </div>
+<h2>خدماتنا</h2>
 
-  <div class="card">
-    <h3>جودة وإتقان</h3>
-    <p>
-      نهتم بالتفاصيل ونحرص على إنجاز العمل بشكل جيد.
-    </p>
-  </div>
+<div class="services-container">
+
+<div class="card">
+
+<h3>🔨 تسليح حديد البناء</h3>
+
+<p>
+تنفيذ أعمال تسليح حديد البناء بدقة واحترافية،
+مع الاهتمام بجميع التفاصيل.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏗️ جودة وإتقان</h3>
+
+<p>
+نحرص على إنجاز العمل بشكل جيد
+وبجودة عالية مع الالتزام بالمواعيد.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📐 دقة في العمل</h3>
+
+<p>
+تنفيذ الأعمال بعناية ودقة
+لضمان أفضل نتيجة في البناء.
+</p>
+
+</div>
+
+</div>
+
 </section>
+
 
 <section id="contact">
-  <h2>اتصل بنا</h2>
 
-  <div class="card">
-    <p>عبد اللطيف لبيهي</p>
-    <p>للاستفسار والتواصل يرجى الاتصال بنا.</p>
-  </div>
+<h2>اتصل بنا</h2>
+
+<div class="contact-box">
+
+<p>
+عبد اللطيف لبيهي
+</p>
+
+<p>
+للاستفسار والتواصل يرجى الاتصال بنا
+</p>
+
+<p class="phone">
+📞 اتصل بنا
+</p>
+
+<br>
+
+<a class="button" href="tel:0000000000">
+اتصل الآن
+</a>
+
+</div>
+
 </section>
 
+
 <footer>
-  © 2026 عبد اللطيف لبيهي - جميع الحقوق محفوظة
+
+© 2026 عبد اللطيف لبيهي - جميع الحقوق محفوظة
+
 </footer>
 
 </body>
-</html
+</html>
+أكيد 👍 هذا الكود الكامل بتصميم أبيض + ذهبي، ومناسب لموقعك.
+مهم: احذف محتوى index.html القديم بالكامل، والصق هذا الكود مكانه، ثم احفظ. اسم الملف يبقى index.html كما هو.
+HTML
