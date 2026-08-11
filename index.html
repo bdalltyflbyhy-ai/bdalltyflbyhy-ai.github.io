@@ -65,10 +65,56 @@
 
     /* ===== HERO ===== */
 
-    .hero {
-      text-align: center;
-      padding: 90px 20px 80px;
-    }
+    
+    /* ===== HERO ===== */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            to left,
+            rgba(255,255,255,0.97) 20%,
+            rgba(255,255,255,0.80) 45%,
+            rgba(255,255,255,0.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero .name {
+    font-size: 28px;
+    color: #25D366;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #555555;
+    font-size: 20px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+}
+  
+    
 
     .hero h1 {
       font-size: 42px;
